@@ -6,7 +6,9 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <Header />
-  <RouterView></RouterView>
+  <div class="main">
+    <RouterView></RouterView>
+  </div>
   <Footer />
 </template>
 
@@ -15,6 +17,6 @@ import { defineComponent } from "vue";
 export default defineComponent({});
 </script>
 
-<style scoped>
+<style>
 @import url("../public/css/index.css");
 </style>
