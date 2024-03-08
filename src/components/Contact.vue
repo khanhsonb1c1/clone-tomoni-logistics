@@ -7,37 +7,27 @@
         </div>
         <div class="col-md-5">
           <div class="section-heading">
-            <h2>Contact Us</h2>
-            <p>
-              It's very easy to get in touch with us. Just use the contact form or via any of the contact information
-              provided below.
-            </p>
+            <h2>Liên hệ</h2>
+            <p>Nếu có thắc mắc về bất cứ vấn đề gì, hãy liên hệ với chung tôi qua các kênh dưới đây.</p>
           </div>
           <div class="footer-address">
-            <h6><strong>Head Office</strong></h6>
-            <p>Nigeria</p>
+            <h6><strong>Văn phòng</strong></h6>
+            <p>74 Đỗ Pháp Thuận, Hải Châu, Đà Nẵng.</p>
             <ul>
-              <li><span>Phone: +00 0 0000 0000</span></li>
+              <li><span>Số điện thoại: 1900 2149</span></li>
               <li>
-                <span>Email : <a href="mailto:support@eazee.com.ng">support@eazee.com.ng</a></span>
+                <span>Email : <a href="mailto:">tomonivn@gamil.com</a></span>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-md-7">
           <form action="form.php" method="POST" id="contactForm" class="contact-us-form" novalidate="novalidate">
-            <h5>Talk to Us</h5>
+            <h5>Hỗ trợ</h5>
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="name"
-                    id="name"
-                    placeholder="Enter name"
-                    required="required"
-                  />
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Tên" required="required" />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
@@ -47,7 +37,7 @@
                     class="form-control"
                     name="email"
                     id="email"
-                    placeholder="Enter email"
+                    placeholder="Email"
                     required="required"
                   />
                 </div>
@@ -56,12 +46,19 @@
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="form-group">
-                  <input type="text" name="phone" value="" class="form-control" id="phone" placeholder="Your Phone" />
+                  <input
+                    type="text"
+                    name="phone"
+                    value=""
+                    class="form-control"
+                    id="phone"
+                    placeholder="Số điện thoại"
+                  />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
                 <div class="form-group">
-                  <input type="text" name="subject" value="" class="form-control" id="company" placeholder="Subject" />
+                  <input type="text" name="subject" value="" class="form-control" id="company" placeholder="Tiêu đề" />
                 </div>
               </div>
             </div>
@@ -74,14 +71,14 @@
                     class="form-control"
                     rows="7"
                     cols="25"
-                    placeholder="Message"
+                    placeholder="Nội dung"
                   ></textarea>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-sm-12 mt-3">
-                <button type="submit" class="btn solid-btn" id="btnContactUs">Send Message</button>
+                <button type="submit" class="btn solid-btn" id="btnContactUs">Gửi hỗ trợ</button>
               </div>
             </div>
           </form>

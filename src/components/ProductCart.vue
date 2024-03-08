@@ -1,18 +1,18 @@
 <template>
-  <div class="col-md-3 col-lg-3 mt-3 mb-2">
+  <div :class="[layout, 'mt-3 mb-2']" @click="redirectToProductDetail">
     <div class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg h-100">
-      <div class="discount" v-if="item.tax_percent">
-        <span>{{ item.tax_percent }}%</span>
+      <div class="discount" v-if="item.discount">
+        <span>{{ item.discount }}%</span>
       </div>
       <div class="circle-icon mb-3">
         <!-- <span class="ti-eye text-white"></span> -->
         <img :src="item.image_url" alt="logo" />
       </div>
-      <p class="text-left">{{ item.categories[0].name || "Sản phẩm HOT" }}</p>
+      <p class="text-left">{{ item?.categories[0]?.name || "Sản phẩm HOT" }}</p>
 
       <h5 class="text-truncate-2 text-left">{{ item.name }}</h5>
       <div class="d-flex">
-        <text-money-inital :amount="item.initial_price" v-if="item.tax_percent" class="mr-2" />
+        <text-money-inital :amount="item.initial_price" v-if="item.discount" class="mr-2" />
         <text-money :amount="item.price" color="dark" class="" />
       </div>
     </div>
@@ -30,6 +30,15 @@ export default defineComponent({
   props: {
     item: {
       required: true,
+      type: {} as any,
+    },
+    layout: {
+      default: "col-md-3 col-lg-3",
+    },
+  },
+  methods: {
+    redirectToProductDetail() {
+      this.$router.push(`/products/${this.item.id}`);
     },
   },
 });

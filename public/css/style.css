@@ -2590,9 +2590,10 @@ span.sub-title{
 /*404 page*/
 .error-content .notfound-404 {
     position: relative;
-    height: 280px;
+    /* height: 280px; */
     z-index: 2;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 .error-content .notfound-404 h1 {
     font-size: 230px;

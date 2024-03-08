@@ -17,8 +17,7 @@
           <div class="hero-content-left ptb-100 text-white">
             <h1 class="text-white" style="color: #06b5e4 !important">TOMONIVN</h1>
             <p class="lead" style="color: #44546b !important">
-              Chúng tôi chuyên cung cấp các giải pháp về Logistics với chất lượng và dịch vụ chất lượng hàng đầu Việt
-              Nam
+              TomoniVN là công ty hàng đầu trong lĩnh vực bán lẻ hàng nội địa tại Nhật Bản tại Việt Nam.
             </p>
 
             <div class="download-btn mt-5">
@@ -29,7 +28,7 @@
         </div>
         <div class="col-md-6 col-lg-5">
           <div class="hero-animation-img">
-            <img class="img-fluid d-block animation-one" src="/public/img/logistics.png" alt="animation image" />
+            <img class="img-fluid d-block animation-one" src="/public/img/banner-1.png" alt="animation image" />
             <!-- <img
               class="img-fluid d-none d-lg-block animation-two"
               src="img/hero-animation-01.svg"
@@ -38,13 +37,13 @@
             /> -->
             <img
               class="img-fluid d-none d-lg-block animation-three"
-              src="img/hero-animation-02.svg"
+              src="../../public/img/hero-animation-02.svg"
               alt="animation image"
               width="120"
             />
             <img
               class="img-fluid d-none d-lg-block animation-four"
-              src="img/hero-animation-03.svg"
+              src="../../public/img/hero-animation-03.svg"
               alt="animation image"
               width="230"
             />

@@ -7,7 +7,7 @@
         <div class="row justify-content-between">
           <div class="col-md-12 col-lg-4 mb-4 mb-md-4 mb-sm-4 mb-lg-0">
             <div class="footer-nav-wrap text-white">
-              <img src="img/eazee.svg" alt="footer logo" width="60" class="img-fluid mb-3" />
+              <img src="../../public/img/logo-sm.png" alt="footer logo" width="60" class="img-fluid mb-3" />
               <p>Eazee Logistics Provides Real-Time Easy Tracking of Shipment from Pick-Up to Delivery.</p>
 
               <div class="social-list-wrap">

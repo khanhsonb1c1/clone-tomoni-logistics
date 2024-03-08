@@ -1,11 +1,11 @@
 <template>
   <header class="header">
     <!--start navbar-->
-    <nav class="navbar navbar-expand-lg fixed-top bg-transparent">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background: #b6ebfc">
       <div class="container">
-        <a class="navbar-brand" href="index.html"
-          ><img src="/public/img/logo-sm.png" width="60" alt="logo" class="img-fluid"
-        /></a>
+        <RouterLink class="navbar-brand" to="/"
+          ><img src="../../public/img/logo-sm.png" width="60" alt="logo" class="img-fluid"
+        /></RouterLink>
         <button
           class="navbar-toggler"
           type="button"
@@ -36,23 +36,10 @@
                             <a class="dropdown-item" href="index-8.html">Demo Template 8 <span class="badge badge-warning">New</span></a>
                         </div>
                     </li> -->
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="index.html">Trang chủ</a>
+            <li class="nav-item" v-for="(item, index) in menu" :key="index">
+              <RouterLink class="nav-link page-scroll" :to="item.path">{{ item.name }}</RouterLink>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#partners">Dịch vụ</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#screenshots">Giới thiệu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#partners">Đánh giá</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#screenshots">Liên hệ</a>
-            </li>
             <!-- <li class="nav-item">
                         <a class="nav-link page-scroll" href="#screenshots">TEAM</a>
                     </li> -->
@@ -93,7 +80,7 @@
           </ul>
           <ul class="navbar-nav ml-auto">
             <!-- <a href="#" class="btn" style="background-color: #44546B; padding: 1rem 2rem 1rem 2rem; color: #ffffff;">DOWNLOAD NOW</a> -->
-            <a href="#" class="btn google-play-btn mr-3">SẢN PHẨM</a>
+            <RouterLink to="/products" class="btn google-play-btn mr-3">SẢN PHẨM</RouterLink>
           </ul>
         </div>
       </div>
@@ -107,6 +94,32 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "header-component",
+  data() {
+    return {
+      menu: [
+        {
+          name: "Trang chủ",
+          path: "/",
+        },
+        {
+          name: "Dịch vụ",
+          path: "/",
+        },
+        {
+          name: "Giới thiệu",
+          path: "/",
+        },
+        {
+          name: "Đánh giá",
+          path: "/",
+        },
+        {
+          name: "Liên hệ",
+          path: "/",
+        },
+      ],
+    };
+  },
 });
 </script>
 
