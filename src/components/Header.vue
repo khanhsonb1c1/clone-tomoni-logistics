@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-lg fixed-top" style="background: #b6ebfc">
       <div class="container">
         <RouterLink class="navbar-brand" to="/"
-          ><img src="../../public/img/logo-sm.png" width="60" alt="logo" class="img-fluid"
+          ><img src="../../public/img/tomonivn-logo.png" width="160" alt="logo" class="img-fluid"
         /></RouterLink>
         <button
           class="navbar-toggler"
@@ -103,19 +103,19 @@ export default defineComponent({
         },
         {
           name: "Dịch vụ",
-          path: "/",
+          path: "/#services",
         },
         {
           name: "Giới thiệu",
-          path: "/",
+          path: "/#about",
         },
         {
           name: "Đánh giá",
-          path: "/",
+          path: "/#reviews",
         },
         {
           name: "Liên hệ",
-          path: "/",
+          path: "/#contact",
         },
       ],
     };

@@ -40,7 +40,7 @@
             </div>
 
             <div class="reviews">
-              <span>{{ detail?.star }} </span>
+              <!-- <span>{{ detail?.star || 5 }} </span> -->
               <star />
               <div class="dot"></div>
               <span> {{ detail?.reviews_count }} </span>
@@ -48,7 +48,7 @@
             </div>
 
             <div class="price-box">
-              <text-money-inital :amount="detail?.initial_price" class="mr-2" :to_vnd="true" v-if="detail.discount" />
+              <text-money-inital :amount="detail?.initial_price" class="mr-2" :to_vnd="true" v-if="detail?.discount" />
               <text-money :amount="detail?.price" :to_vnd="true" />
             </div>
 
@@ -61,7 +61,7 @@
             <div class="info row">
               <div class="col-lg-4"><p>Xuất sứ:</p></div>
               <div class="col-lg-8">
-                <span> {{ detail?.origin?.name || "..." }}  </span>
+                <span> {{ detail?.origin?.name || "..." }} </span>
               </div>
             </div>
             <div class="info row">
@@ -82,6 +82,9 @@
         </div>
       </div>
     </div>
+    <div class="container white-bg">
+      <!-- <ProductReview /> -->
+    </div>
   </section>
 </template>
 
@@ -93,6 +96,7 @@ import Star from "@/components/Star.vue";
 import TextMoney from "@/components/TextMoney.vue";
 import TextMoneyInital from "@/components/TextMoneyInital.vue";
 import BreadCrumb from "@/components/BreadCrumb.vue";
+// import ProductReview from "./ProductReview.vue";
 
 export default defineComponent({
   name: "product-detail-component",
@@ -252,4 +256,27 @@ export default defineComponent({
   }
 }
 
+.description {
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    border-radius: 0;
+  }
+  .promo-section {
+    margin-top: 20px;
+  }
+}
+
+.description h1,
+h2 {
+  font-size: 1.2em;
+}
+.description h3,
+h4 {
+  font-size: 1.1em;
+}
+.description p {
+  margin-bottom: 5px;
+}
 </style>

@@ -34,7 +34,7 @@ export default defineComponent({
     CartItemSkeleton
   },
   created() {
-    productStore().fetchTopProducts();
+    !Object.keys(this.top_products).length && productStore().fetchTopProducts();
   },
   computed: {
     ...mapState(productStore, ["fetching", "top_products"]),

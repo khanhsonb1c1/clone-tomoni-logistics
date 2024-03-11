@@ -1,4 +1,4 @@
-import { supplier_ikom } from "@/common/data.information";
+import { supplier_ikom } from "@/configs/commons";
 import { getTopProduct, getProductList, getProductDetail, getCheckCodeInfo } from "@/services/getAPI";
 import type Pagination from "@/types/Pagination";
 import type Product from "@/types/Product";

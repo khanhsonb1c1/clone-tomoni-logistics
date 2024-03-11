@@ -1,1 +1,0 @@
-export const supplier_ikom = 390;

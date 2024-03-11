@@ -26,7 +26,7 @@
           <span> {{ check_product.code }} </span>
         </div>
       </div>
-      <div class="info row">
+      <div class="info row" v-if="alert.status">
         <div class="col-lg-4"><p>Ngày mua:</p></div>
         <div class="col-lg-8">
           <loading-mini v-if="fetch_checked" />
@@ -41,11 +41,19 @@
         </div>
       </div>
 
-      <div class="noti" v-if="date_checked">
-        <span>Sản phẩm đã được mua</span>
+      <div class="noti">
+        <span class="text-uppercase" v-if="alert.status">Cảm ơn quý khách đã tin dùng sản phẩm của TomoniVN</span>
+        <div v-else>
+          <span class="text-uppercase">
+            Cảnh báo:
+            <p class="mb-1">Sản phẩm đã được mua sắm trước đó.</p>
+          </span>
+          <p>Ngày mua: {{ date_checked }}</p>
+        </div>
       </div>
     </template>
   </product-detail>
+  <ModalAlert :alert="alert" v-if="alert.status != null" />
 </template>
 
 <script lang="ts">
@@ -55,15 +63,22 @@ import { productStore } from "@/stores/productStore";
 import ProductDetail from "@/components/ProductDetail.vue";
 import LoadingMini from "@/components/LoadingMini.vue";
 import { checkCode } from "@/services/getAPI";
+import ModalAlert from "@/components/ModalAlert.vue";
 
 export default defineComponent({
-  name: "product-detail-page",
-  components: { ProductDetail, LoadingMini },
+  components: { ProductDetail, LoadingMini, ModalAlert },
   data() {
     return {
       is_error: false,
       date_checked: "",
       fetch_checked: false,
+
+      alert: {
+        title: "",
+        message: "",
+        sub_message: "",
+        status: null as any,
+      },
     };
   },
   computed: {
@@ -84,6 +99,12 @@ export default defineComponent({
               this.handleCheckCode();
             } else {
               this.date_checked = data.checked;
+              this.alert = {
+                title: "Cảnh báo",
+                message: `Sản phẩm đã được mua sắm vào lúc ${data.checked}`,
+                sub_message: "Hãy xem thêm thông tin chi tiết về sản phẩm.",
+                status: 0,
+              };
             }
             this.is_error = false;
           })
@@ -98,10 +119,17 @@ export default defineComponent({
     handleCheckCode() {
       this.fetch_checked = true;
       this.date_checked = "";
+
       checkCode(this.id)
         .then(({ data }) => {
           this.fetch_checked = false;
           this.date_checked = data.checked;
+          this.alert = {
+            title: "Cảm ơn",
+            message: "Cảm ơn quý khách đã tin tưởng mua sắm sản phẩm được phân phối chính hãng từ TomoniVN.",
+            sub_message: "Hãy xem thêm thông tin chi tiết về sản phẩm nhé.",
+            status: 1,
+          };
         })
         .catch((error) => {
           console.log(error);
@@ -115,11 +143,10 @@ export default defineComponent({
 <style scoped lang="scss">
 .noti {
   margin-top: 1.5em;
-  span {
-    background: #de3e3e;
-    padding: 1em 2em;
-    color: #fff;
-    font-weight: 500;
-  }
+  background: #de3e3e;
+  padding: 1em 2em;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
 }
 </style>

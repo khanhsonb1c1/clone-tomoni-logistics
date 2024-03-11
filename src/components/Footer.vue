@@ -2,13 +2,13 @@
   <!--footer section start-->
   <footer class="footer-section">
     <!--footer top start-->
-    <div class="footer-top pt-150 background-img-2" style="background: #354154">
+    <div class="footer-top pt-100 background-img-2" style="background: #354154">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-md-12 col-lg-4 mb-4 mb-md-4 mb-sm-4 mb-lg-0">
             <div class="footer-nav-wrap text-white">
               <img src="../../public/img/logo-sm.png" alt="footer logo" width="60" class="img-fluid mb-3" />
-              <p>Eazee Logistics Provides Real-Time Easy Tracking of Shipment from Pick-Up to Delivery.</p>
+              <p>TomoniVN</p>
 
               <div class="social-list-wrap">
                 <ul class="social-list list-inline list-unstyled">
@@ -28,60 +28,35 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-8">
+          <div class="col-md-12 col-lg-8 col-12">
             <div class="row">
-              <div class="col-sm-6 col-md-4 col-lg-4 mb-4 mb-sm-4 mb-md-0 mb-lg-0">
+              <div class="col-sm-6 col-md-4 col-lg-6 mb-4 mb-sm-4 mb-md-0 mb-lg-0">
                 <div class="footer-nav-wrap text-white">
-                  <h5 class="mb-3 text-white">Company</h5>
+                  <h5 class="mb-3 text-white">Giới thiệu</h5>
                   <ul class="list-unstyled">
-                    <li class="mb-2"><a href="index.html">Home</a></li>
-                    <li class="mb-2"><a href="#features">Features</a></li>
-                    <li class="mb-2"><a href="#partners">Partners</a></li>
-                    <li class="mb-2"><a href="#screenshots">Screens</a></li>
-                    <li class="mb-2"><a href="#team">Team</a></li>
-                    <li class="mb-2"><a href="#contact">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-4 mb-4 mb-sm-4 mb-md-0 mb-lg-0">
-                <div class="footer-nav-wrap text-white">
-                  <h5 class="mb-3 text-white">Resources</h5>
-                  <ul class="list-unstyled support-list">
-                    <li class="mb-2">
-                      <a href="#">Events</a>
-                    </li>
-                    <li class="mb-2">
-                      <a href="#">Careers</a>
-                    </li>
-                    <li class="mb-2">
-                      <a href="#">Customers</a>
-                    </li>
-                    <li class="mb-2">
-                      <a href="#">Community</a>
-                    </li>
-                    <li class="mb-2">
-                      <a href="#">Our Team</a>
+                    <li class="mb-2" v-for="(item, index) in menu" :key="index">
+                      <router-link :to="item.path">{{ item.name }}</router-link>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-4 col-lg-4">
+              <div class="col-sm-6 col-md-4 col-lg-6">
                 <div class="footer-nav-wrap text-white">
-                  <h5 class="mb-3 text-white">Location</h5>
+                  <h5 class="mb-3 text-white">Địa chỉ</h5>
                   <ul class="list-unstyled support-list">
                     <li class="mb-2 d-flex align-items-center">
                       <span class="ti-location-pin mr-2"></span>
-                      Nigeria
+                      15 Bùi Kỷ, Cẩm Lệ, Đà Nẵng.
                     </li>
                     <li class="mb-2 d-flex align-items-center">
-                      <span class="ti-mobile mr-2"></span> <a href="tel:+61283766284"> +00 0 0000 0000</a>
+                      <span class="ti-mobile mr-2"></span> <a href="tel:+61283766284">1900.2149</a>
                     </li>
                     <li class="mb-2 d-flex align-items-center">
-                      <span class="ti-email mr-2"></span><a href="mailto:mail@example.com"> support@eazee.com.ng</a>
+                      <span class="ti-email mr-2"></span><a href="mailto:mail@example.com"> tomonivn@gmail.com</a>
                     </li>
-                    <li class="mb-2 d-flex align-items-center">
+                    <!-- <li class="mb-2 d-flex align-items-center">
                       <span class="ti-world mr-2"></span><a href="#"> www.eazee.com.ng</a>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
               </div>
@@ -95,23 +70,17 @@
           <div class="row">
             <div class="col-md-6 col-lg-7">
               <div class="copyright-wrap small-text">
-                <p class="mb-0 text-white">
-                  © Eazee Logistics
-                  <!-- <script>
-                    document.write(new Date().getFullYear());
-                  </script> -->
-                  , All rights reserved
-                </p>
+                <p class="mb-0 text-white">© Design by Tomonivn</p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-5">
+            <!-- <div class="col-md-6 col-lg-5">
               <div class="terms-policy-wrap text-lg-right text-md-right text-left">
                 <ul class="list-inline">
                   <li class="list-inline-item"><a class="small-text" href="#">Terms</a></li>
                   <li class="list-inline-item"><a class="small-text" href="#">Privacy Policy</a></li>
                 </ul>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -126,6 +95,32 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "footer-component",
+  data() {
+    return {
+      menu: [
+        {
+          name: "Trang chủ",
+          path: "/",
+        },
+        {
+          name: "Dịch vụ",
+          path: "/#services",
+        },
+        {
+          name: "Giới thiệu",
+          path: "/#about",
+        },
+        {
+          name: "Đánh giá",
+          path: "/#reviews",
+        },
+        {
+          name: "Liên hệ",
+          path: "/#contact",
+        },
+      ],
+    };
+  },
 });
 </script>
 

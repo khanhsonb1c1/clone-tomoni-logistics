@@ -22,24 +22,17 @@
           </div>
         </div>
         <div class="col-md-7">
-          <form action="form.php" method="POST" id="contactForm" class="contact-us-form" novalidate="novalidate">
+          <form action="form.php" method="POST" id="contactForm" class="contact-us-form">
             <h5>Hỗ trợ</h5>
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="form-group">
-                  <input type="text" class="form-control" name="name" id="name" placeholder="Tên" required="required" />
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Tên" />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
                 <div class="form-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    id="email"
-                    placeholder="Email"
-                    required="required"
-                  />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
                 </div>
               </div>
             </div>

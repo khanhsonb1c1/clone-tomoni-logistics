@@ -11,7 +11,6 @@ import { productStore } from "@/stores/productStore";
 import ProductDetail from "@/components/ProductDetail.vue";
 
 export default defineComponent({
-  name: "product-detail-page",
   components: { ProductDetail },
   data() {
     return {};

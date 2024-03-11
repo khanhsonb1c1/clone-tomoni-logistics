@@ -1,10 +1,11 @@
 <template>
-  <section class="promo-section ptb-100 mt-5">
+  <section class="promo-section ptb-100">
     <div class="container">
       <div class="filter-category">
-        <div class="item" v-for="item in categories" :key="item.id">
+        <filter-category-item :item="item" v-for="item in categories" :key="item.id" />
+        <!-- <div class="item" v-for="item in categories" :key="item.id">
           <span>{{ item.name }}</span>
-        </div>
+        </div> -->
       </div>
       <div class="row equal" v-if="fetching">
         <cart-item-skeleton v-for="i in 8" :key="i" />
@@ -24,6 +25,7 @@ import CartItemSkeleton from "@/components/CartItemSkeleton.vue";
 import { mapState } from "pinia";
 import { productStore } from "@/stores/productStore";
 import Pagination from "@/components/Pagination.vue";
+import filterCategoryItem from "@/components/filterCategoryItem.vue";
 
 export default defineComponent({
   name: "product-list-page",
@@ -31,11 +33,16 @@ export default defineComponent({
     ProductCart,
     CartItemSkeleton,
     Pagination,
+    filterCategoryItem,
   },
   data() {
     return {
       // query: {} as any,
       categories: [
+        {
+          name: "Tất cả",
+          id: undefined,
+        },
         {
           name: "Chăm sóc sắc đẹp",
           id: "001",
@@ -82,19 +89,17 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+.promo-section {
+  margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .promo-section {
+    margin-top: 80px;
+  }
+}
+
 .filter-category {
   display: flex;
-  .item {
-    margin: 5px;
-    span {
-      border-radius: 12px;
-      padding: 5px 15px;
-      background: #2d9596;
-      color: #f3f3f3;
-      :hover {
-        background: #174f50;
-      }
-    }
-  }
+  flex-wrap: wrap;
 }
 </style>

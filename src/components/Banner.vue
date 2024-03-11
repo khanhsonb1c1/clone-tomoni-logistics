@@ -21,7 +21,7 @@
             </p>
 
             <div class="download-btn mt-5">
-              <a href="#" class="btn google-play-btn mr-3"> Tìm hiểu thêm</a>
+              <router-link to="/#about" class="btn google-play-btn mr-3"> Tìm hiểu thêm</router-link>
               <!-- <a href="#" class="btn app-store-btn"><span class="ti-apple"></span> App Store</a> -->
             </div>
           </div>

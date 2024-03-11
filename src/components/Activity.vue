@@ -1,11 +1,11 @@
 <template>
-  <section id="screenshots" class="screenshots-section ptb-100">
+  <section id="reviews" class="screenshots-section ptb-100">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="section-heading text-center">
-            <h2>App Screenshots</h2>
-            <p class="lead">Eazee Logistics Provides Real-Time Easy Tracking of Shipment from Pick-Up to Delivery</p>
+            <h2>Đánh giá</h2>
+            <p class="lead">TomoniVN luôn nhận được những đánh giá cao từ những khách hàng đã từng hợp tác.</p>
           </div>
         </div>
       </div>
@@ -13,12 +13,7 @@
       <div class="screen-slider-content mt-5">
         <!-- <div class="screenshot-frame"></div> -->
         <div class="screen-carousel owl-carousel owl-theme dot-indicator">
-          <img src="/public/img/01.png" class="img-fluid" alt="screenshots" />
-          <img src="/public/img/02.png" class="img-fluid" alt="screenshots" />
-          <img src="/public/img/03.png" class="img-fluid" alt="screenshots" />
-          <img src="/public/img/04.png" class="img-fluid" alt="screenshots" />
-          <img src="/public/img/05.png" class="img-fluid" alt="screenshots" />
-          <img src="/public/img/06.png" class="img-fluid" alt="screenshots" />
+          <ReviewOfCustomerCard v-for="(info, index) in feedbacks" :key="index" :info="info" />
         </div>
       </div>
       <!--end app screen carousel-->
@@ -28,9 +23,29 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import fb1 from "../../public/img/fb1.png";
+import fb2 from "../../public/img/fb2.png";
+import fb3 from "../../public/img/fb3.png";
+import ReviewOfCustomerCard from "./ReviewOfCustomerCard.vue";
 
 export default defineComponent({
-  name: "about-component",
+  name: "feedback-component",
+  components: {
+    ReviewOfCustomerCard,
+  },
+  data() {
+    return {
+      feedbacks: [fb1, fb2, fb3, fb1, fb2, fb3],
+    };
+  },
+  mounted() {
+    const script = document.createElement("script");
+    script.src = "../../public/js/scripts.js";
+    script.onload = () => {
+      console.log("Script loaded.");
+    };
+    document.head.appendChild(script);
+  },
 });
 </script>
 

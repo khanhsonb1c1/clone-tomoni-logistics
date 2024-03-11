@@ -40,7 +40,7 @@ const router = createRouter({
 });
 router.afterEach((to) => {
   nextTick(() => {
-    document.title = (to.meta.title || to.name) + " | " + import.meta.env.VITE_APP_NAME;
+    document.title = (to.meta.title || to.name) + " | " + "TomoniVN";
   });
 });
 

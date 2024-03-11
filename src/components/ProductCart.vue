@@ -6,7 +6,7 @@
       </div>
       <div class="circle-icon mb-3">
         <!-- <span class="ti-eye text-white"></span> -->
-        <img :src="item.image_url" alt="logo" />
+        <img :src="item.image_url" :alt="item.name" />
       </div>
       <p class="text-left">{{ item?.categories[0]?.name || "Sản phẩm HOT" }}</p>
 
@@ -33,7 +33,7 @@ export default defineComponent({
       type: {} as any,
     },
     layout: {
-      default: "col-md-3 col-lg-3",
+      default: "col-md-3 col-lg-3 col-6",
     },
   },
   methods: {
@@ -49,13 +49,24 @@ h5 {
   font-size: 1em;
 }
 .single-promo {
-  padding: 3em 2em;
+  padding: 2em 1.5em;
   position: relative;
   /* background: white; */
 }
 p {
   margin-bottom: 0.5em;
 }
-img {
+.circle-icon {
+  aspect-ratio: 1/1;
+}
+
+@media screen and (max-width: 767px) {
+  .col-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .single-promo {
+    padding: 1em;
+  }
 }
 </style>

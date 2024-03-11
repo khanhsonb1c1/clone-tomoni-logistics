@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex bread-crump">
+  <div class="d-flex bread-crump flex-wrap">
     <router-link to="/">Trang chủ</router-link> <span>/</span> <router-link to="/products">Sản phẩm</router-link>
     <span>/</span>
     <p>{{ target }}</p>
@@ -34,5 +34,12 @@ p {
 }
 span {
   margin: 0 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .bread-crump {
+    margin-top: 4em;
+    margin-left: 1em;
+  }
 }
 </style>
