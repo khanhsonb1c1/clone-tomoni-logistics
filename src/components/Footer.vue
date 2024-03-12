@@ -52,7 +52,7 @@
                       <span class="ti-mobile mr-2"></span> <a href="tel:+61283766284">1900.2149</a>
                     </li>
                     <li class="mb-2 d-flex align-items-center">
-                      <span class="ti-email mr-2"></span><a href="mailto:mail@example.com"> tomonivn@gmail.com</a>
+                      <span class="ti-email mr-2"></span><a href="mailto:mail@example.com"> info@tomonivn.com</a>
                     </li>
                     <!-- <li class="mb-2 d-flex align-items-center">
                       <span class="ti-world mr-2"></span><a href="#"> www.eazee.com.ng</a>

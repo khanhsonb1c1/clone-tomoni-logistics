@@ -44,16 +44,20 @@ export default defineComponent({
           id: undefined,
         },
         {
-          name: "Chăm sóc sắc đẹp",
-          id: "001",
+          name: "Chăm sóc tóc",
+          id: "003",
         },
         {
-          name: "Chăm sóc sức khoẻ",
-          id: "006",
+          name: "Chăm sóc da",
+          id: "002",
         },
         {
           name: "Thực phẩm",
           id: "026",
+        },
+        {
+          name: "Thực phẩm chức năng",
+          id: "008",
         },
       ],
     };
