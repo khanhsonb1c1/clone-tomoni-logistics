@@ -45,7 +45,15 @@ h2 {
 }
 
 
-
+.description h1,h2 {
+    font-size: 1.2em;
+}
+.description h3,h4 {
+    font-size: 1.1em;
+}
+.description p {
+    margin-bottom: 5px;
+}
 
 .product-content {
   padding: 2em;
@@ -111,8 +119,4 @@ h2 {
 
 .description {
   padding: 3em 2em;
-}
-
-.description h2 {
-  color: red;
 }

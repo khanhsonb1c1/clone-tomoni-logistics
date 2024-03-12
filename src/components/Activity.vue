@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="section-heading text-center">
-            <h2>Đánh giá</h2>
+            <h2 style="font-size: 2.4em;">Đánh giá</h2>
             <p class="lead">TomoniVN luôn nhận được những đánh giá cao từ những khách hàng đã từng hợp tác.</p>
           </div>
         </div>

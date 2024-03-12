@@ -4,6 +4,7 @@
   <!-- <services /> -->
   <!-- <highlight /> -->
   <about />
+  <SupplierInfo />
   <Activity />
 
   <contact />
@@ -20,11 +21,13 @@ import Contact from "@/components/Contact.vue";
 import Products from "@/components/Products.vue";
 import About from "@/components/About.vue";
 import scrollToElement from "@/hooks/useScrollTo";
+import SupplierInfo from "@/components/SupplierInfo.vue";
 
 export default defineComponent({
   components: {
     Banner,
     // Services, Highlight,
+    SupplierInfo,
     Activity,
     Contact,
     Products,

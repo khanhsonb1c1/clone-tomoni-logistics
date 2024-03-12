@@ -17,7 +17,7 @@
           <div class="hero-content-left ptb-100 text-white">
             <h1 class="text-white" style="color: #06b5e4 !important">TOMONIVN</h1>
             <p class="lead" style="color: #44546b !important">
-              TomoniVN là công ty hàng đầu trong lĩnh vực bán lẻ hàng nội địa tại Nhật Bản tại Việt Nam.
+              TomoniVN là công ty hàng đầu trong lĩnh vực bán lẻ sản phẩm nội địa Nhật Bản tại Việt Nam.
             </p>
 
             <div class="download-btn mt-5">

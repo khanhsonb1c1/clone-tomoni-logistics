@@ -7,7 +7,7 @@
         </div>
         <div class="col-md-5">
           <div class="section-heading">
-            <h2>Liên hệ</h2>
+            <h2 style="font-size: 2em">Liên hệ</h2>
             <p>Nếu có thắc mắc về bất cứ vấn đề gì, hãy liên hệ với chung tôi qua các kênh dưới đây.</p>
           </div>
           <div class="footer-address">
@@ -16,7 +16,7 @@
             <ul>
               <li><span>Số điện thoại: 1900 2149</span></li>
               <li>
-                <span>Email : <a href="mailto:">tomonivn@gamil.com</a></span>
+                <span>Email : <a href="mailto:">tomonivn@gmail.com</a></span>
               </li>
             </ul>
           </div>

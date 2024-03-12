@@ -158,10 +158,6 @@ export default defineComponent({
     object-fit: contain;
   }
 
-  .main-img {
-    padding: 3em;
-  }
-
   .images {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -193,7 +189,7 @@ export default defineComponent({
 
   .main-img {
     text-align: center;
-    height: 500px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,17 +262,5 @@ export default defineComponent({
   .promo-section {
     margin-top: 20px;
   }
-}
-
-.description h1,
-h2 {
-  font-size: 1.2em;
-}
-.description h3,
-h4 {
-  font-size: 1.1em;
-}
-.description p {
-  margin-bottom: 5px;
 }
 </style>

@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8 col-md-8">
           <div class="section-heading text-center mb-5">
-            <h2>Về chúng tôi</h2>
+            <h2 style="font-size: 2.4em;">Về chúng tôi</h2>
             <p class="lead">
               Công ty TomoniVN là một trong những doanh nghiệp hàng đầu trong lĩnh vực bán lẻ hàng nội địa tại Nhật Bản.
               Chúng tôi cam kết mang đến cho khách hàng những sản phẩm chất lượng cao, đa dạng và phong cách, đồng thời

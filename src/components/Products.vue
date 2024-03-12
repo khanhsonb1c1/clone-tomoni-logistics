@@ -5,7 +5,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-7 col-md-8">
           <div class="section-heading text-center mb-5">
-            <h2>Sản phẩm nổi bật</h2>
+            <h2 style="font-size: 2.4em;">Sản phẩm nổi bật</h2>
             <p class="lead">Cùng khám phá những sản phẩm nội địa hàng đầu Nhật Bản đang được cung cấp bởi TomoniVN.</p>
           </div>
         </div>

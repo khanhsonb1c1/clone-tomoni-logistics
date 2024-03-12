@@ -6,9 +6,9 @@
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-md-12 col-lg-4 mb-4 mb-md-4 mb-sm-4 mb-lg-0">
-            <div class="footer-nav-wrap text-white">
+            <div class="footer-nav-wrap text-white text-center">
               <img src="../../public/img/logo-sm.png" alt="footer logo" width="60" class="img-fluid mb-3" />
-              <p>TomoniVN</p>
+              <p>công ty TNHH Tomoni VN</p>
 
               <div class="social-list-wrap">
                 <ul class="social-list list-inline list-unstyled">
