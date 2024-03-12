@@ -14,7 +14,7 @@
         <cart-item-skeleton v-for="i in 8" :key="i" />
       </div>
       <div class="row equal" v-else>
-        <product-cart v-for="item in top_products.trending" :key="item.id" :item="item"/>
+        <product-cart v-for="item in top_products" :key="item.id" :item="item" />
       </div>
     </div>
   </section>
@@ -31,10 +31,10 @@ export default defineComponent({
   name: "products-component",
   components: {
     ProductCart,
-    CartItemSkeleton
+    CartItemSkeleton,
   },
   created() {
-    !Object.keys(this.top_products).length && productStore().fetchTopProducts();
+    !this.top_products.length && productStore().fetchTopProducts();
   },
   computed: {
     ...mapState(productStore, ["fetching", "top_products"]),

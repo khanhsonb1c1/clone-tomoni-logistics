@@ -13,7 +13,7 @@
       <h5 class="text-truncate-2 text-left">{{ item.name }}</h5>
       <div class="d-flex">
         <text-money-inital :amount="item.initial_price" v-if="item.discount" class="mr-2" />
-        <text-money :amount="item.price" color="dark" class="" />
+        <text-money :amount="price" color="dark" class="" />
       </div>
     </div>
   </div>
@@ -23,6 +23,8 @@
 import { defineComponent } from "vue";
 import TextMoney from "./TextMoney.vue";
 import TextMoneyInital from "./TextMoneyInital.vue";
+import { getPriceOfSupplier } from "@/hooks/useGetPriceOfSupplier";
+
 export default defineComponent({
   components: { TextMoney, TextMoneyInital },
 
@@ -34,6 +36,12 @@ export default defineComponent({
     },
     layout: {
       default: "col-md-3 col-lg-3 col-6",
+    },
+  },
+  computed: {
+    price() {
+      const price_by_supplier = getPriceOfSupplier(this.item.suppliers);
+      return price_by_supplier ? price_by_supplier : this.item.price;
     },
   },
   methods: {

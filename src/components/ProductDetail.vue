@@ -10,10 +10,10 @@
           <div class="product-images">
             <main id="gallery">
               <div class="main-img position-relative">
-                <!-- <i class="lni lni-chevron-left" @click="handleNextOrPreviousImage(0)"></i> -->
+                <i class="fa-solid fa-angle-left" @click="handleNextOrPreviousImage(0)"></i>
 
                 <img class="" :src="detail?.image_url || 'https://via.placeholder.com/1000x670'" id="current" alt="#" />
-                <!-- <i class="lni lni-chevron-right" @click="handleNextOrPreviousImage(1)"></i> -->
+                <i class="fa-solid fa-angle-right" @click="handleNextOrPreviousImage(1)"></i>
               </div>
 
               <div class="images scroll-x scroll-hidden">
@@ -49,7 +49,7 @@
 
             <div class="price-box">
               <text-money-inital :amount="detail?.initial_price" class="mr-2" :to_vnd="true" v-if="detail?.discount" />
-              <text-money :amount="detail?.price" :to_vnd="true" />
+              <text-money :amount="price" :to_vnd="true" />
             </div>
 
             <div class="info row mt-4">
@@ -96,6 +96,7 @@ import Star from "@/components/Star.vue";
 import TextMoney from "@/components/TextMoney.vue";
 import TextMoneyInital from "@/components/TextMoneyInital.vue";
 import BreadCrumb from "@/components/BreadCrumb.vue";
+import { getPriceOfSupplier } from "@/hooks/useGetPriceOfSupplier";
 // import ProductReview from "./ProductReview.vue";
 
 export default defineComponent({
@@ -128,11 +129,47 @@ export default defineComponent({
     target_breadcrump() {
       return this.detail?.categories?.length ? this.detail?.categories[0].name : this.detail?.name;
     },
+    price() {
+      const price_by_supplier = getPriceOfSupplier(this.detail.suppliers);
+      return price_by_supplier ? price_by_supplier : this.detail.price;
+    },
   },
 
   methods: {
     handleClick() {
-      //
+      const current = document.getElementById("current") as any;
+      const opacity = 0.6;
+      const imgs = document.querySelectorAll(".img");
+      imgs.forEach((img: any) => {
+        img.addEventListener("click", (e: any) => {
+          //reset opacity
+          imgs.forEach((img: any) => {
+            img.style.opacity = 1;
+          });
+          current.src = e.target.src;
+          e.target.style.opacity = opacity;
+        });
+      });
+    },
+    handleNextOrPreviousImage(action: number) {
+      // action == 1 : next img
+      // action == 0 : previous img
+      const imgs = document.querySelectorAll(".img");
+      const current = document.getElementById("current") as HTMLImageElement;
+
+      if (current && imgs.length > 0) {
+        const currentIndex = Array.from(imgs).findIndex((img: any) => img.currentSrc == current.src);
+
+        let nextIndex = 0;
+        if (action == 1) {
+          nextIndex = currentIndex < imgs.length - 1 ? currentIndex + 1 : 0;
+        }
+        if (action == 0) {
+          nextIndex = currentIndex == 0 ? imgs.length - 1 : currentIndex - 1;
+        }
+        const nextImage = imgs[nextIndex] as HTMLImageElement;
+        current.src = nextImage.src;
+      }
     },
   },
 });
@@ -205,25 +242,21 @@ export default defineComponent({
       max-height: 100%;
     }
 
-    .lni {
+    .fa-solid {
       font-size: 1.5em;
       transition: 0.5s;
       cursor: pointer;
-      padding: 8px;
-      border-radius: 50%;
-      // background-color: $white;
 
       &:hover {
-        color: black;
-        background-color: #9b9b9b;
+        color: #b10813;
       }
     }
-    .lni-chevron-left {
+    .fa-angle-left {
       position: absolute;
       top: 50%;
       left: 10px;
     }
-    .lni-chevron-right {
+    .fa-angle-right {
       position: absolute;
       top: 50%;
       right: 10px;

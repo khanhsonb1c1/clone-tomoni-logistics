@@ -1,5 +1,5 @@
 import { supplier_ikom } from "@/configs/commons";
-import { getTopProduct, getProductList, getProductDetail, getCheckCodeInfo } from "@/services/getAPI";
+import { getProductList, getProductDetail, getCheckCodeInfo } from "@/services/getAPI";
 import type Pagination from "@/types/Pagination";
 import type Product from "@/types/Product";
 import type CheckProduct from "@/types/checkProduct";
@@ -20,9 +20,12 @@ export const productStore = defineStore({
     fetchTopProducts() {
       return new Promise((resolve, reject) => {
         this.fetching = true;
-        getTopProduct()
+        getProductList({
+          "filter[suppliers.id]": supplier_ikom,
+          include: "suppliers,origin,categories",
+        })
           .then(({ data }) => {
-            this.top_products = data;
+            this.top_products = data.data.slice(0, 8);
             this.fetching = false;
             resolve(data);
           })
@@ -58,7 +61,7 @@ export const productStore = defineStore({
       return new Promise((resolve, reject) => {
         this.fetching = true;
         getProductDetail(id, {
-          include: "origin,categories,reviewsCount,images,tags",
+          include: "origin,categories,reviewsCount,images,tags,suppliers",
         })
           .then(({ data }) => {
             this.detail = data;
