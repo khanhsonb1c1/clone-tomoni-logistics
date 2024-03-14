@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-3 col-lg-3 mt-3 mb-2">
+  <div class="col-md-3 col-lg-3 mt-3 mb-2 col-6">
     <div class="skeleton-cart-item">
       <div class="image skeleton"></div>
       <p class="mt-3 skeleton"></p>

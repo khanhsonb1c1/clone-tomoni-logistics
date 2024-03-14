@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="section-heading text-center">
-            <h2 style="font-size: 2.4em;">Đánh giá</h2>
+            <h2 style="font-size: 2.4em">Đánh giá</h2>
             <p class="lead">TomoniVN luôn nhận được những đánh giá cao từ những khách hàng đã từng hợp tác.</p>
           </div>
         </div>
@@ -42,9 +42,9 @@ export default defineComponent({
   },
   mounted() {
     const script = document.createElement("script");
-    script.src = "../../public/js/scripts.js";
+    script.src = "/js/scripts.js";
     script.onload = () => {
-      console.log("Script loaded.");
+      console.log("Script loaded successfully.");
     };
     document.head.appendChild(script);
   },
