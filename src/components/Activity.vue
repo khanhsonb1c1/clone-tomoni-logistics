@@ -26,6 +26,8 @@ import { defineComponent } from "vue";
 import fb1 from "../../public/img/fb1.png";
 import fb2 from "../../public/img/fb2.png";
 import fb3 from "../../public/img/fb3.png";
+import fb4 from "../../public/img/fb4.png";
+import fb5 from "../../public/img/fb5.png";
 import ReviewOfCustomerCard from "./ReviewOfCustomerCard.vue";
 
 export default defineComponent({
@@ -35,7 +37,7 @@ export default defineComponent({
   },
   data() {
     return {
-      feedbacks: [fb1, fb2, fb3, fb1, fb2, fb3],
+      feedbacks: [fb1, fb2, fb3, fb4, fb5],
     };
   },
   mounted() {

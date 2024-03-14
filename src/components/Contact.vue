@@ -12,11 +12,11 @@
           </div>
           <div class="footer-address">
             <h6><strong>Văn phòng</strong></h6>
-            <p>74 Đỗ Pháp Thuận, Hải Châu, Đà Nẵng.</p>
+            <p>15 Bùi Kỷ, Cẩm Lệ, Đà Nẵng.</p>
             <ul>
               <li><span>Số điện thoại: 1900 2149</span></li>
               <li>
-                <span>Email : <a href="mailto:">tomonivn@gmail.com</a></span>
+                <span>Email : <a href="mailto:info@tomonivn.com">info@tomonivn.com</a></span>
               </li>
             </ul>
           </div>
