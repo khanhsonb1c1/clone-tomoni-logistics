@@ -6,19 +6,11 @@
         <RouterLink class="navbar-brand" to="/"
           ><img src="../../public/img/tomonivn-logo.png" width="160" alt="logo" class="img-fluid"
         /></RouterLink>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" @click="handleCollapse">
           <span class="ti-menu"></span>
         </button>
 
-        <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse main-menu" ref="menu" @click="handleCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item" v-for="(item, index) in menu" :key="index">
               <RouterLink class="nav-link page-scroll" :to="item.path">{{ item.name }}</RouterLink>
@@ -55,15 +47,23 @@ export default defineComponent({
           path: "/#about",
         },
         {
-          name: "Đánh giá",
-          path: "/#reviews",
-        },
-        {
           name: "Liên hệ",
           path: "/#contact",
         },
       ],
     };
+  },
+
+  methods: {
+    handleCollapse() {
+      const menu_element: any = this.$refs.menu;
+
+      if (menu_element.classList.contains("collapse")) {
+        menu_element.classList.remove("collapse");
+      } else {
+        menu_element.classList.add("collapse");
+      }
+    },
   },
 });
 </script>

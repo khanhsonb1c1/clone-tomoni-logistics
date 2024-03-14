@@ -41,12 +41,12 @@ export default defineComponent({
     };
   },
   mounted() {
-    const script = document.createElement("script");
-    script.src = "/js/scripts.js";
-    script.onload = () => {
-      console.log("Script loaded successfully.");
-    };
-    document.head.appendChild(script);
+    // const script = document.createElement("script");
+    // script.src = "/js/scripts.js";
+    // script.onload = () => {
+    //   console.log("Script loaded successfully.");
+    // };
+    // document.head.appendChild(script);
   },
 });
 </script>

@@ -110,10 +110,10 @@ export default defineComponent({
           name: "Giới thiệu",
           path: "/#about",
         },
-        {
-          name: "Đánh giá",
-          path: "/#reviews",
-        },
+        // {
+        //   name: "Đánh giá",
+        //   path: "/#reviews",
+        // },
         {
           name: "Liên hệ",
           path: "/#contact",
