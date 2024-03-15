@@ -40,7 +40,7 @@
     </div>
   </section>
 
-  <section id="about" class="promo-section ptb-100 about" style="background-color: #f3f3f3">
+  <section id="supplier2" class="promo-section ptb-100 about" style="background-color: #f3f3f3">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-9 col-md-8">
@@ -70,6 +70,42 @@
                 padding: 1rem 2rem 1rem 2rem;
                 color: #ffffff;
                 background-color: #334da1;
+              "
+              >Tìm hiểu thêm</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="supplier2" class="promo-section ptb-100 about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-8">
+          <div class="section-heading text-center mb-5">
+            <p class="lead" style="margin-bottom: 10px">Đối tác</p>
+            <img src="../../public/img/logo-chinoshioya.png" alt="" height="50" />
+            <p class="lead mt-3">CHINOSHIOYA-Giải pháp cho làn da nhạy cảm.</p>
+            <p>
+              Thành lập từ 1975, Công ty TNHH CHINOSHIOYA được biết đến với thương hiệu chuyên sản xuất những sản phẩm
+              từ thiên nhiên. Toạ lạc tại Kumamoto, là một tỉnh nông nghiệp hàng đầu Nhật Bản, sản xuất nhiều loại nông
+              sản, CHINOSHIOYA có thế mạnh trong việc tạo ra những sản phẩm chất lượng, thân thiện với người dùng.
+            </p>
+            <p>
+              Với cam kết đem lại các sản phẩm không gây dị ứng và giàu thành phần dưỡng ẩm, CHINOSHIOYA đã từng bước khẳng định vị thế cuả mình trong mắt người tiêu dùng toàn thế giới.
+            </p>
+
+            <a
+              href="https://www.chinoshioya.com/"
+              target="_blank"
+              class="btn"
+              style="
+                border: 3px solid #592e00;
+                font-weight: 600;
+                padding: 1rem 2rem 1rem 2rem;
+                color: #ffffff;
+                background-color: #592e00;
               "
               >Tìm hiểu thêm</a
             >

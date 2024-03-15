@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="promo-section ptb-100">
+  <section id="services" class="promo-section ptb-100" style="background-color: #f3f3f3">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-7 col-md-8">
