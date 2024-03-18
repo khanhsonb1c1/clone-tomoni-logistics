@@ -5,7 +5,8 @@
     </div>
 
     <div class="container white-bg">
-      <div class="row equal mt-3">
+      <ProductDetailSkeleton v-if="fetching" />
+      <div class="row equal mt-3" v-else>
         <div class="col-lg-6">
           <div class="product-images">
             <main id="gallery">
@@ -97,11 +98,12 @@ import TextMoney from "@/components/TextMoney.vue";
 import TextMoneyInital from "@/components/TextMoneyInital.vue";
 import BreadCrumb from "@/components/BreadCrumb.vue";
 import { getPriceOfSupplier } from "@/hooks/useGetPriceOfSupplier";
+import ProductDetailSkeleton from "./ProductDetailSkeleton.vue";
 // import ProductReview from "./ProductReview.vue";
 
 export default defineComponent({
   name: "product-detail-component",
-  components: { Star, TextMoney, TextMoneyInital, BreadCrumb },
+  components: { Star, TextMoney, TextMoneyInital, BreadCrumb, ProductDetailSkeleton },
   props: {
     detail: {
       type: {} as any,
