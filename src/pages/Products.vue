@@ -3,9 +3,6 @@
     <div class="container">
       <div class="filter-category">
         <filter-category-item :item="item" v-for="item in categories" :key="item.id" />
-        <!-- <div class="item" v-for="item in categories" :key="item.id">
-          <span>{{ item.name }}</span>
-        </div> -->
       </div>
       <div class="row equal" v-if="fetching">
         <cart-item-skeleton v-for="i in 8" :key="i" />

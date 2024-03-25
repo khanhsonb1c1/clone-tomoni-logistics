@@ -22,9 +22,6 @@
                   <li class="list-inline-item">
                     <a href="#" target="_blank" title="Instagram"><span class="ti-skype"></span></a>
                   </li>
-                  <li class="list-inline-item">
-                    <a href="#" target="_blank" title="printerst"><span class="ti-linkedin"></span></a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -42,7 +39,7 @@
                   <span class="ti-mobile mr-2"></span> <a href="tel:19002149">1900.2149</a>
                 </li>
                 <li class="mb-2 d-flex align-items-center">
-                  <span class="ti-email mr-2"></span><a href="mailto:info@tomonivn.com"> info@tomonivn.com</a>
+                  <span class="ti-email mr-2"></span><a href="mailto:info@tomonivn.com">info@tomonivn.com</a>
                 </li>
                 <li class="mb-2 d-flex align-items-center">
                   <span class="ti-time mr-2"></span><a href="mailto:info@tomonivn.com">Thứ 2 - Thứ 6</a>
@@ -104,6 +101,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import orihiroImg from "../../public/img/orihiro-logo.png";
+import kumanoImg from "../../public/img/kumano-logo.png";
+import chinoshioyaImg from "../../public/img/logo-chinoshioya.png";
 
 export default defineComponent({
   name: "footer-component",
@@ -122,10 +122,6 @@ export default defineComponent({
           name: "Giới thiệu",
           path: "/#about",
         },
-        // {
-        //   name: "Sản phẩm",
-        //   path: "/products",
-        // },
         {
           name: "Liên hệ",
           path: "/#contact",
@@ -135,15 +131,15 @@ export default defineComponent({
       partner: [
         {
           name: "ORIHIRO",
-          img: "../../public/img/kumano-logo.png",
+          img: orihiroImg,
         },
         {
           name: "KUMANO",
-          img: "../../public/img/orihiro-logo.png",
+          img: kumanoImg,
         },
         {
           name: "chinoshioya",
-          img: "../../public/img/logo-chinoshioya.png",
+          img: chinoshioyaImg,
         },
       ],
 
@@ -162,7 +158,7 @@ export default defineComponent({
         },
         {
           name: "Thực phẩm",
-          path: "026",
+          path: "/products?filter[categories]=026",
         },
         {
           name: "Thực phẩm chức năng",

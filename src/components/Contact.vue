@@ -22,17 +22,17 @@
           </div>
         </div>
         <div class="col-md-7">
-          <form action="form.php" method="POST" id="contactForm" class="contact-us-form">
+          <form ref="form" @submit.prevent="sendEmail" class="contact-us-form">
             <h5>Hỗ trợ</h5>
             <div class="row">
               <div class="col-sm-6 col-12">
                 <div class="form-group">
-                  <input type="text" class="form-control" name="name" id="name" placeholder="Tên" />
+                  <input type="text" class="form-control" name="full_name" id="full_name" placeholder="Tên" />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
+                  <input type="email" class="form-control" name="user_email" id="user_email" placeholder="Email" />
                 </div>
               </div>
             </div>
@@ -41,17 +41,17 @@
                 <div class="form-group">
                   <input
                     type="text"
-                    name="phone"
+                    name="phone_number"
                     value=""
                     class="form-control"
-                    id="phone"
+                    id="phone_number"
                     placeholder="Số điện thoại"
                   />
                 </div>
               </div>
               <div class="col-sm-6 col-12">
                 <div class="form-group">
-                  <input type="text" name="subject" value="" class="form-control" id="company" placeholder="Tiêu đề" />
+                  <input type="text" name="title" value="" class="form-control" id="title" placeholder="Tiêu đề" />
                 </div>
               </div>
             </div>
@@ -59,8 +59,8 @@
               <div class="col-12">
                 <div class="form-group">
                   <textarea
-                    name="message"
-                    id="message"
+                    name="content"
+                    id="content"
                     class="form-control"
                     rows="7"
                     cols="25"
@@ -71,7 +71,7 @@
             </div>
             <div class="row">
               <div class="col-sm-12 mt-3">
-                <button type="submit" class="btn solid-btn" id="btnContactUs">Gửi hỗ trợ</button>
+                <button type="submit" value="Send" class="btn solid-btn" id="btnContactUs">Gửi hỗ trợ</button>
               </div>
             </div>
           </form>
@@ -84,9 +84,27 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+// import emailjs from "@emailjs/browser";
 
 export default defineComponent({
   name: "contact-component",
+  methods: {
+    sendEmail() {
+      // const content: any = this.$refs.form;
+      // emailjs
+      //   .sendForm("service_aaq3jil", "template_txxlchd", content, {
+      //     publicKey: "-2mdSIlMwpASBzMcb",
+      //   })
+      //   .then(
+      //     () => {
+      //       console.log("SUCCESS!");
+      //     },
+      //     (error) => {
+      //       console.log("FAILED...", error);
+      //     }
+      //   );
+    },
+  },
 });
 </script>
 
